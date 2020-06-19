@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Smart House</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="/panel.js"></script>
+	</head>
+	<body>
+	<center>
+	<h1>SMART HOUSE PANEL</h1>
+	<p>
+	<label class="check"> Manual control
+	<input class="chk" type="checkbox" id="manual" name="cbox" value="Manual" onclick="Manual()">
+	</label>
+	<p>
+	<picture>
+	<img src="light.png" alt="light" style="width:130px;height:130px;vertical-align:middle;">
+	<img src="fan.png" alt="fan" style="width:130px;height:130px;vertical-align:middle;">
+	<img src="alert.png" alt="alert" style="width:130px;height:130px;vertical-align:middle;">
+	<img src="roof.png" alt="roof" style="width:130px;height:130px;vertical-align:middle;">
+	</picture>
+	</p>
+	<button id="btn1" class="lightBtn" onclick="Light()">LIGHT</button>
+	<button id="btn2" class="fanBtn" onclick="Fan()">FAN</button>
+	<button id="btn3" class="alertBtn" onclick="Alert()">ALERT</button>
+	<button id="btn4" class="roofBtn" onclick="Roofs()">ROOF</button>
+	<div class="slidecontainer">
+	<input type="range" min="70" max="100" value="70" class="slider" id="fanVel" name="vel" onchange="fanspeed(this.value)">
+	<p>
+	<span>Fan speed:</span>
+	<span id="velocity">70%</span>
+	</p>
+	</div>
+	<hr>
+	<p>
+	<img src="temp.png" alt="temperature" style="width:70px;height:70px;vertical-align:middle;">
+    <span class="dht-labels">Temperature: </span> 
+    <span id="temperature">%TEMPERATURE%</span>
+    <sup class="units">°C</sup>
+	</p>
+	<p>
+	<img src="humid.jpg" alt="humidity" style="width:70px;height:70px;vertical-align:middle;">
+    <span class="dht-labels">Humidity: </span>
+    <span id="humidity">%HUMIDITY%</span>
+    <sup class="units">%</sup>
+	</p>
+	<p>
+		<img src="lux.png" alt="lux" style="width:70px;height:70px;vertical-align:middle;">
+		<span class="dht-labels">Lux: </span>
+		<span id="Lux">%HUMIDITY%</span>
+		<sup class="units">lx</sup>
+		</p>
+	</center>
+	</body
+</html>
